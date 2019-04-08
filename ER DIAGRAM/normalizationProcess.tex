@@ -2,7 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{natbib}
-
+\usepackage{pdfpages}
+\usepackage[paper=portrait,pagesize]{typearea}
 
 \title{Bazy danych 1}
 
@@ -25,5 +26,13 @@ Podczas pierwszej implementacji, nie zwróciliśmy uwagi na relacje zachodzące 
 
 \vspace{5mm}
 Rozwiązaniem problemu jest wprowadzenie osobnej tabli $SCHEDULES$, która abstrahuje dane dotyczące czasu pracy oraz dni tygodnia od reszty informacji dotyczących pracownika. Tabela $SCHEDULES$ przechowuje klucz obcy do pracownika oraz do basenu, dzięki czemu znacznie redukujemy liczbę kolumn w tabeli i korzystamy z relacji klucz obcy -> główny. Rozwiązanie to też w prosty sposób pozwoliło uniknąć problemu przetrzymywania listy dni w jednej kolumnie, dzięki czemu pierwsza zasada postaci normalnej zostaje zachowana.
+
+\vspace{5mm}
+Poniżej zamieszczono diagram ER wygenerowanay przy pomocy narzędzia Oracle SQL Developer Data Modeler.
+\newpage
+\KOMAoptions{paper=landscape,pagesize}
+\recalctypearea
+\includepdf[pages=-]{ER_DIAGRAM.pdf}
+
 
 \end{document}
