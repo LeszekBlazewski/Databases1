@@ -1,0 +1,4 @@
+dataSchema.dmd
+dataSchema/
+__pycache__
+*.csv
