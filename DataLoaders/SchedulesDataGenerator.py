@@ -1,6 +1,5 @@
 from random import randint
 from DataGenerator import DataGenerator
-import random
 
 
 class SchedulesDataGenerator(DataGenerator):

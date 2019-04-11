@@ -1,7 +1,5 @@
 from random import randint
 from DataGenerator import DataGenerator
-import random
-import datetime
 
 
 class ReservationDataGenerator(DataGenerator):
