@@ -12,8 +12,8 @@ class PoolDataGenerator(DataGenerator):
         self.spot_price = []
 
     def generate_table_data(self, number_of_rows):
-        for _ in range(0, number_of_rows):
-            self.number_of_places.append(randint(20, 300))
+        for _ in range(0, number_of_rows//5):
+            self.number_of_places.append(randint(20, 150))
             self.required_skill.append(randint(1, 10))
             self.spot_price.append(
                 DataGenerator.spot_price_list[randint(
