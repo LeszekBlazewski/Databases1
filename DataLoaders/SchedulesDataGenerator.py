@@ -5,6 +5,8 @@ from DataGenerator import DataGenerator
 class SchedulesDataGenerator(DataGenerator):
     """ Generates data for pools table """
 
+    day_of_week = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+
     def __init__(self, faker):
         super().__init__(faker)
         self.staffIDs = []
@@ -20,7 +22,8 @@ class SchedulesDataGenerator(DataGenerator):
             [start_time, end_time] = self.create_valid_reservation_times()
             self.startTimes.append(start_time)
             self.endTimes.append(end_time)
-            self.dayOfWeeks.append(self.fake.day_of_week())
+            self.dayOfWeeks.append(
+                self.day_of_week[randint(0, len(self.day_of_week)-1)])
 
         self.table_data = {
             'STAFFID': self.staffIDs,

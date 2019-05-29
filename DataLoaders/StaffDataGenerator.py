@@ -25,9 +25,21 @@ class StaffDataGenerator(DataGenerator):
             self.jobs.append(job)
             self.salaries.append(self.create_valid_salary(job))
             if i % 10 != 0:                                         # not all workers should have supervisor
-                self.supervisors.append(randint(1, number_of_rows))
+                # tylko cztery pierwsze rekordy sa nadzorcami innych uczestnikow, aby zredukowac calkowita liczbe.
+                if job == 'Ratownik':
+                    self.supervisors.append(1)
+                elif job == 'Sprzątacz':
+                    self.supervisors.append(2)
+                elif job == 'Kasjer':
+                    self.supervisors.append(3)
+                elif job == 'Ochroniarz':
+                    self.supervisors.append(4)
+                elif job == 'Młodszy ratownik':
+                    self.supervisors.append(5)
+                else:
+                    self.supervisors.append(6)
             else:
-                self.supervisors.append('')
+                self.supervisors.append('')         # brak nadzorcy
 
         self.table_data = {
             'NAME': self.names,
