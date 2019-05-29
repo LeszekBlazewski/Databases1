@@ -17,7 +17,7 @@ class ReservationDataGenerator(DataGenerator):
     def generate_table_data(self, number_of_rows):
         for _ in range(0, number_of_rows):
             self.clientIDs.append(randint(1, number_of_rows))
-            self.poolIDs.append(randint(1, number_of_rows//5))
+            self.poolIDs.append(randint(1, number_of_rows//100))
             reservation_date_object = self.fake.date_this_year(
                 before_today=False, after_today=True)
             self.reservationDates.append(

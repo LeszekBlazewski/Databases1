@@ -51,7 +51,7 @@ class CsvCreator(object):
 
 def main():
     csv_creator = CsvCreator()
-    csv_creator.generate_database_data(100)
+    csv_creator.generate_database_data(2000)
 
 
 if __name__ == "__main__":

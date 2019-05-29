@@ -16,9 +16,9 @@ class SchedulesDataGenerator(DataGenerator):
         self.dayOfWeeks = []
 
     def generate_table_data(self, number_of_rows):
-        for _ in range(0, number_of_rows):
-            self.staffIDs.append(randint(1, number_of_rows))
-            self.poolsID.append(randint(1, number_of_rows//5))
+        for _ in range(0, number_of_rows//4):
+            self.staffIDs.append(randint(2, number_of_rows//20))
+            self.poolsID.append(randint(1, number_of_rows//100))
             [start_time, end_time] = self.create_valid_reservation_times()
             self.startTimes.append(start_time)
             self.endTimes.append(end_time)
