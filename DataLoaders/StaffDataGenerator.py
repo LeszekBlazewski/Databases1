@@ -18,13 +18,16 @@ class StaffDataGenerator(DataGenerator):
         self.supervisors = []
 
     def generate_table_data(self, number_of_rows):
-        for _ in range(0, number_of_rows):
+        for i in range(0, number_of_rows):
             self.names.append(self.fake.first_name())
             self.surnames.append(self.fake.last_name())
             job = self.staff_jobs[randint(0, len(self.staff_jobs)-1)]
             self.jobs.append(job)
             self.salaries.append(self.create_valid_salary(job))
-            self.supervisors.append(randint(1, number_of_rows))
+            if i % 10 != 0:                                         # not all workers should have supervisor
+                self.supervisors.append(randint(1, number_of_rows))
+            else:
+                self.supervisors.append('')
 
         self.table_data = {
             'NAME': self.names,

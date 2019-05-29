@@ -21,7 +21,7 @@ class ReservationDataGenerator(DataGenerator):
             reservation_date_object = self.fake.date_this_year(
                 before_today=False, after_today=True)
             self.reservationDates.append(
-                reservation_date_object.strftime('%d-%m-%Y'))
+                reservation_date_object.strftime('%d-%b-%Y'))
             [start_time, end_time] = self.create_valid_reservation_times()
             self.start_times.append(start_time)
             self.end_times.append(end_time)

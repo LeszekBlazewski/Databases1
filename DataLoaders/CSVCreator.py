@@ -40,7 +40,12 @@ class CsvCreator(object):
             generator.generate_table_data(number_of_rows_for_table)
             data_frame = pd.DataFrame(generator.get_table_data())
             data_frame.index = data_frame.index + 1
-            data_frame.to_csv(self.file_names[file_iter])   # header=False
+            if self.file_names[file_iter] != "ReservationData.csv":
+                data_frame.to_csv(
+                    self.file_names[file_iter], header=False)
+            else:
+                data_frame.to_csv(
+                    self.file_names[file_iter], header=False, index=False)
             file_iter += 1
 
 

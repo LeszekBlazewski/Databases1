@@ -1,4 +1,5 @@
 dataSchema.dmd
 dataSchema/
 __pycache__
-*.csv
+DataLoaderLog.png
+sql loader commands
