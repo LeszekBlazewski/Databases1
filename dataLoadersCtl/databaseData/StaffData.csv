@@ -1,0 +1,100 @@
+1,Józef,Karpeta,10000,Dyrektor,
+2,Radosław,Solis,5470,Ratownik,1
+3,Maksymilian,Oskroba,2390,Sprzątacz,1
+4,Malwina,Rok,2871,Kasjer,1
+5,Dawid,Maras,5838,Ochroniarz,1
+6,Franciszek,Ośka,2861,Szatniarz,1
+7,Julianna,Hajda,2401,Kasjer,4
+8,Jerzy,Bukowiec,2988,Młodszy ratownik,2
+9,Bianka,Handke,5121,Ratownik,2
+10,Kalina,Frącz,4346,Ratownik,
+11,Stanisław,Rubaj,2346,Szatniarz,
+12,Olaf,Klinger,5792,Ratownik,2
+13,Robert,Lewek,2017,Młodszy ratownik,2
+14,Nikodem,Capiga,5150,Ochroniarz,5
+15,Natan,Gwizdek,5526,Ochroniarz,5
+16,Ada,Szemraj,2151,Sprzątacz,3
+17,Ida,Brańka,2600,Sprzątacz,3
+18,Ida,Barej,5380,Ratownik,2
+19,Jędrzej,Hojda,5408,Ratownik,2
+20,Adrianna,Bembenek,5893,Ochroniarz,5
+21,Łukasz,Dziedzina,2819,Szatniarz,6
+22,Tomasz,Sadoch,2807,Sprzątacz,3
+23,Kaja,Szkup,2440,Młodszy ratownik,2
+24,Albert,Mainka,2821,Szatniarz,6
+25,Julianna,Janoszek,2649,Sprzątacz,3
+26,Apolonia,Jędral,2751,Sprzątacz,3
+27,Olga,Wszoła,2167,Sprzątacz,3
+28,Jerzy,Sromek,4115,Ochroniarz,5
+29,Konrad,Zbrzeźniak,2540,Kasjer,4
+30,Agnieszka,Szyja,4972,Ochroniarz,5
+31,Oskar,Harasimiuk,2927,Młodszy ratownik,2
+32,Marek,Rajman,4538,Ratownik,2
+33,Mariusz,Trepczyk,2336,Kasjer,4
+34,Michał,Małyszka,5648,Ochroniarz,5
+35,Róża,Krzyk,2784,Młodszy ratownik,2
+36,Konrad,Bulanda,2415,Kasjer,4
+37,Kajetan,Podkowa,4821,Ochroniarz,5
+38,Olga,Goliszek,5069,Ochroniarz,5
+39,Damian,Bortkiewicz,5510,Ratownik,2
+40,Artur,Gal,2814,Szatniarz,6
+41,Liwia,Mich,4254,Ochroniarz,5
+42,Marcin,Rapa,2592,Sprzątacz,3
+43,Apolonia,Deluga,2265,Kasjer,4
+44,Aurelia,Szalast,2654,Sprzątacz,3
+45,Natasza,Mitek,2801,Kasjer,4
+46,Sonia,Bartela,2295,Młodszy ratownik,2
+47,Jacek,Gendera,2799,Szatniarz,6
+48,Blanka,Łuksza,2469,Sprzątacz,3
+49,Adrian,Stożek,2846,Kasjer,4
+50,Sebastian,Kafel,5919,Ratownik,2
+51,Kajetan,Pitura,2278,Sprzątacz,3
+52,Maks,Kabza,2559,Szatniarz,6
+53,Cyprian,Smutek,2722,Młodszy ratownik,2
+54,Sebastian,Sulik,2568,Sprzątacz,3
+55,Nataniel,Maligłówka,5964,Ochroniarz,5
+56,Mikołaj,Wnuczek,2625,Kasjer,4
+57,Oskar,Osman,2259,Młodszy ratownik,2
+58,Tymon,Bejnarowicz,2063,Młodszy ratownik,2
+59,Lidia,Ziegler,2827,Kasjer,4
+60,Blanka,Sereda,2451,Młodszy ratownik,2
+61,Nataniel,Sąsiadek,2440,Szatniarz,6
+62,Ewelina,Więcławek,4391,Ratownik,2
+63,Natan,Mądrzyk,4223,Ochroniarz,5
+64,Maksymilian,Drewicz,5434,Ochroniarz,5
+65,Przemysław,Sulich,5697,Ochroniarz,5
+66,Arkadiusz,Strzyż,2384,Szatniarz,6
+67,Julianna,Nowek,4589,Ochroniarz,5
+68,Witold,Cader,2893,Kasjer,4
+69,Arkadiusz,Szajek,2653,Kasjer,4
+70,Marika,Ślebioda,2776,Kasjer,4
+71,Michał,Kołtuniak,2165,Kasjer,4
+72,Gabriel,Łyczek,5456,Ratownik,2
+73,Kajetan,Polasik,2160,Kasjer,4
+74,Kajetan,Jasnoch,2209,Szatniarz,6
+75,Julian,Spadło,2436,Kasjer,4
+76,Maksymilian,Sznura,2345,Młodszy ratownik,2
+77,Karina,Doruch,2621,Sprzątacz,3
+78,Klara,Kutnik,4829,Ratownik,2
+79,Blanka,Elert,2294,Kasjer,4
+80,Marcin,Rosada,2929,Szatniarz,6
+81,Kazimierz,Olchawa,2033,Sprzątacz,3
+82,Julita,Samol,2526,Młodszy ratownik,2
+83,Robert,Deluga,2874,Sprzątacz,3
+84,Alex,Wałęsa,2262,Szatniarz,6
+85,Elżbieta,Kamela,5408,Ratownik,2
+86,Oskar,Suchta,2881,Kasjer,4
+87,Marianna,Wicha,4680,Ratownik,2
+88,Krystian,Materka,2622,Szatniarz,6
+89,Sara,Siwka,5609,Ratownik,2
+90,Łukasz,Ceynowa,2022,Kasjer,4
+91,Krzysztof,Guściora,4598,Ochroniarz,5
+92,Hubert,Pleban,5206,Ratownik,2
+93,Sandra,Sasak,5746,Ratownik,2
+94,Leon,Karalus,4441,Ratownik,2
+95,Ksawery,Łuczka,2842,Kasjer,4
+96,Ryszard,Pieczarka,5600,Ratownik,2
+97,Anna Maria,Pacewicz,2253,Sprzątacz,3
+98,Kamila,Domińczak,2223,Szatniarz,6
+99,Wojciech,Peda,2767,Młodszy ratownik,2
+100,Kamila,Gamoń,2200,Szatniarz,6

@@ -57,7 +57,7 @@ class SchedulesDataGenerator(DataGenerator):
         return [format(start_time, '.2f'), format(end_time, '.2f')]
 
     def read_required_csv(self):
-        self.staff_data_frame = pd.read_csv('StaffData.csv',
+        self.staff_data_frame = pd.read_csv('../dataLoadersCtl/databaseData/StaffData.csv',
                                             index_col='ID_S',
                                             names=[
                                                 'ID_S', 'NAME', 'SURNAME', 'SALARY', 'JOB', 'SUPERVISOR'])
