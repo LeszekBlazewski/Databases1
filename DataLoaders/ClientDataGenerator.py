@@ -15,7 +15,7 @@ class ClientDataGenerator(DataGenerator):
         self.ages = []
 
     def generate_table_data(self, number_of_rows):
-        for _ in range(0, number_of_rows):
+        for _ in range(0, number_of_rows//4):
             self.names.append(self.fake.first_name())
             self.surnames.append(self.fake.last_name())
             social_number_string = self.create_valid_social_number()
@@ -23,7 +23,12 @@ class ClientDataGenerator(DataGenerator):
             self.ages.append(
                 self.calculate_age_based_on_social_number(social_number_string))
             self.swimming_skills.append(randint(1, 10))
-            self.phone_numbers.append(self.fake.phone_number())
+            shouldGetNumber = randint(1, 5)
+            # phone number is optional so leave it blank sometimes
+            if shouldGetNumber in (1, 2, 3, 4):
+                self.phone_numbers.append(self.fake.phone_number())
+            else:
+                self.phone_numbers.append('')
 
         self.table_data = {
             'NAME': self.names,

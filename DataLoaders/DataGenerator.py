@@ -29,7 +29,7 @@ class DataGenerator(ABC):
         return self.table_data
 
     def calculate_age_based_on_social_number(self, social_number_string):
-        """Split the date parts from the number and return the birth date."""
+        """ Calculates age based on SSN"""
         year = int(social_number_string[0:2])
         month = int(social_number_string[2:4])
         year += {
