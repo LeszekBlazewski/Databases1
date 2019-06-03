@@ -10,7 +10,7 @@ WHERE sc.id_pool IN (2, 6, 11) AND sc.dayofweek = 'THU'
 ORDER BY sc.id_pool
 ```
 
-Pięcioro ludzi który mają najwięcej rezerwacji w sierpniu:
+Pięcioro ludzi, którzy mają najwięcej rezerwacji w sierpniu:
 
 ```SQL
 SELECT *
@@ -35,23 +35,23 @@ FROM (SELECT c.name, c.surname, SUM(r.price) AS total_spent
 WHERE ROWNUM <= 20
 ```
 
-Ludzie który pracują przy 4 basenach z najwiekszym stosunkiem ilości rezerwacji do dostępnych miejsc:
+Ludzie, którzy pracują przy 4 basenach z najwiekszą ilością rezerwacji:
 
 ```SQL
 SELECT s.name, s.surname, sc.id_pool
 FROM staff s
 JOIN schedules sc ON (s.id_s = sc.id_staff)
 WHERE sc.id_pool IN (SELECT id_p
-    FROM (SELECT p.id_p, (COUNT(*)/p.numberofplaces) AS rtop_ratio
+    FROM (SELECT p.id_p, (COUNT(*)) AS res_amt
           FROM reservations r
           JOIN pools p ON (r.id_pool = p.id_p)
           GROUP BY p.id_p, p.numberofplaces
-          ORDER BY rtop_ratio DESC)
+          ORDER BY res_amt DESC)
     WHERE ROWNUM <= 4)
 ORDER BY id_pool
 ```
 
-Zwiększyć wypłatę o 100 ludziom pracującym na basenie na którym najwięcej unikalnych klientów zrobilo rezerwacje
+Zwiększyć wypłatę o 100 ludziom pracującym na basenie, na którym najwięcej unikalnych klientów zrobiło rezerwację:
 
 ```SQL
 UPDATE staff
