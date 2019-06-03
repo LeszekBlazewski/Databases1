@@ -6,13 +6,13 @@ This repository contains work done for the Databases class at Wrocław Universit
 
 ## Main target
 
-We were supposed to design and implement a simple database which would help SwimmingPools with data maintanace and information flow.
+We were supposed to design and implement a simple database which would help SwimmingPools with data maintenance and information flow.
 
 ## What can I find here ?
 
 Repository contains full database dump which can be used with ORACLE DATA PUMP tool to create your own instance.
 
-I have also included implemented data generators written durning the process of implementation.
+I have also included implemented data generators written during the process of implementation.
 
 The last thing you can find here are some fancy triggers and PL/SQL procedures which were used to meet given project specification.
 
@@ -26,7 +26,7 @@ The last thing you can find here are some fancy triggers and PL/SQL procedures w
 
 ## Full project documentation
 
-If you are a **polish** reader I highly recommend checking the full project documentation which was submited to the lecturer.
+If you are a **polish** reader I highly recommend checking the full project documentation which was submitted to the lecturer.
 
 ## How can I check it out ?
 
@@ -67,13 +67,13 @@ docker start oracleDb
 docker exec -it oracleDb bash
 ```
 
-#### 7. Now you can use SQL PLUS to interact with the datbase
+#### 7. Now you can use SQL PLUS to interact with the database
 
 ```bash
 sqlplus username/password@SID
 ```
 
-### Create duplicate of database implementd in project
+### Create duplicate of database implemented in project
 
 #### 1. Go to the container && make directory for dump
 
@@ -137,11 +137,11 @@ DataLoaders folder contains all of the generators which are able to create given
 
 ### Format of data
 
-Data is returned as CSV files which are then loaded using the SQL*Loader tool provided by oracle. This solution ensures maximal speed and optimalization.
+Data is returned as CSV files which are then loaded using the SQL*Loader tool provided by oracle. This solution ensures maximal speed and optimization.
 
 ### Used libraries in scripts
 
-Most of the data is pulled from faker library which posses language specific datasets. Some of the easier concepts are simply generated from math funcions or calculated. Pandas was used to easily convert python lists into data frames and then write to csv files. Numpy was used to generate random float data used in currency fields and time.
+Most of the data is pulled from faker library which posses language specific data sets. Some of the easier concepts are simply generated from math functions or calculated. Pandas was used to easily convert python lists into data frames and then write to csv files. Numpy was used to generate random float data used in currency fields and time.
 
 ## PL/SQL, Triggers, Procedures
 
