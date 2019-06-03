@@ -17,7 +17,7 @@ SELECT *
 FROM (SELECT c.name, c.surname, COUNT(*) AS reservations
       FROM clients c
       JOIN reservations r ON (c.id_c = r.id_client)
-      WHERE r.reservationdate BETWEEN '19/08/01' AND '19/08/31'
+      WHERE r.reservationdate BETWEEN '01-AUG-2019' AND '31-AUG-2019'
       GROUP BY c.name, c.surname
       ORDER BY reservations DESC)
 WHERE ROWNUM <= 5
