@@ -2,7 +2,7 @@
 
 Pracownicy z czwartku z basenów 2, 6 i 11:
 
-```sql
+```SQL
 SELECT s.name, s.surname, s.job, sc.poolid
 FROM staff s
 JOIN schedules sc ON (s.id = sc.staffid)
@@ -12,7 +12,7 @@ ORDER BY sc.poolid
 
 Pięcioro ludzi który mają najwięcej rezerwacji w sierpniu:
 
-```sql
+```SQL
 SELECT *
 FROM (SELECT c.name, c.surname, COUNT(*) AS reservations
       FROM clients c
@@ -25,7 +25,7 @@ WHERE ROWNUM <= 5
 
 Dwudziestu klientów, którzy wydali najwięcej na rezerwacje:
 
-```sql
+```SQL
 SELECT *
 FROM (SELECT c.name, c.surname, SUM(r.price) AS total_spent
       FROM clients c
@@ -37,7 +37,7 @@ WHERE ROWNUM <= 20
 
 Ludzie który pracują przy 4 basenach z najwiekszym stosunkiem ilości rezerwacji do dostępnych miejsc:
 
-```sql
+```SQL
 SELECT s.name, s.surname, sc.poolid AS pool_id
 FROM staff s
 JOIN schedules sc ON (s.id = sc.staffid)
@@ -53,7 +53,7 @@ ORDER BY pool_id
 
 Zwiększyć wypłatę o 100 ludziom pracującym na basenie na którym najwięcej unikalnych klientów zrobilo rezerwacje
 
-```sql
+```SQL
 UPDATE staff
 SET salary = salary + 100
 WHERE id IN (SELECT s.id
@@ -69,8 +69,22 @@ WHERE id IN (SELECT s.id
         WHERE ROWNUM = 1))
 ```
 
-Dać 10% podwyżki osobom, które pracują w weekend wieczorami, a ich płaca jest niższa od średniej płacy na ich stanowisku:
+Dać 10% podwyżki osobom, które pracują w weekend na wieczornej zmianie, a ich płaca jest niższa od średniej płacy na ich stanowisku:
 
-```sql
+```SQL
+UPDATE staff
+SET salary = 1.1 * salary
+WHERE id IN (SELECT DISTINCT s.id
+             FROM staff s
+             JOIN schedules sc ON (s.id = sc.staffid)
+             WHERE sc.dayofweek IN ('SAT', 'SUN')
+             AND sc.starttime = '15.00'
+             AND s.salary < (SELECT avgsal
+                             FROM (SELECT job, avg(salary) AS avgsal
+                                   FROM staff
+                                   GROUP BY job)
+                             WHERE job = s.job)
+             GROUP BY s.id)
+
 
 ```
