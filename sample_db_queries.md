@@ -1,6 +1,6 @@
-# SQL Commands for databases project
+# Sample SQL commands for pool database
 
-Pracownicy z czwartku z basenów 2, 6 i 11:
+Employees who work at thursdays at pools with IDs = 2, 6, 11.
 
 ```SQL
 SELECT s.name, s.surname, s.job, sc.id_pool
@@ -10,7 +10,7 @@ WHERE sc.id_pool IN (2, 6, 11) AND sc.dayofweek = 'THU'
 ORDER BY sc.id_pool
 ```
 
-Pięcioro ludzi, którzy mają najwięcej rezerwacji w sierpniu:
+Five clients who made most reservations in august.
 
 ```SQL
 SELECT *
@@ -23,7 +23,7 @@ FROM (SELECT c.name, c.surname, COUNT(*) AS reservations
 WHERE ROWNUM <= 5
 ```
 
-Dwudziestu klientów, którzy wydali najwięcej na rezerwacje:
+Twenty clients who have spent the most on reservations.
 
 ```SQL
 SELECT *
@@ -35,7 +35,7 @@ FROM (SELECT c.name, c.surname, SUM(r.price) AS total_spent
 WHERE ROWNUM <= 20
 ```
 
-Ludzie, którzy pracują przy 4 basenach z najwiekszą ilością rezerwacji:
+Employees who work at four pools with the most number of reservations made on given pool.
 
 ```SQL
 SELECT s.name, s.surname, sc.id_pool
@@ -51,7 +51,7 @@ WHERE sc.id_pool IN (SELECT id_p
 ORDER BY id_pool
 ```
 
-Zwiększyć wypłatę o 100 ludziom pracującym na basenie, na którym najwięcej unikalnych klientów zrobiło rezerwację:
+Increase the salary of employees who work at pools on which most uniq clients have made reservations.
 
 ```SQL
 UPDATE staff
@@ -69,7 +69,7 @@ WHERE id_s IN (SELECT s.id_s
         WHERE ROWNUM = 1))
 ```
 
-Dać 10% podwyżki osobom, które pracują w weekend na wieczornej zmianie, a ich płaca jest niższa od średniej płacy na ich stanowisku:
+Give 10% bonus to employees who work night shifts at weekends and their salary is lower than average salary on their position.
 
 ```SQL
 UPDATE staff
@@ -78,7 +78,7 @@ WHERE id_s IN (SELECT DISTINCT s.id_s
              FROM staff s
              JOIN schedules sc ON (s.id_s = sc.id_staff)
              WHERE sc.dayofweek IN ('SAT', 'SUN')
-             AND sc.starttime = '15.00'
+             AND sc.endtime = 23.00
              AND s.salary < (SELECT avgsal
                              FROM (SELECT job, avg(salary) AS avgsal
                                    FROM staff
